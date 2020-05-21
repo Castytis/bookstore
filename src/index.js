@@ -5,6 +5,8 @@ const User =     require("./user")
 const Book =     require("./book")
 
 
+const port = process.env.PORT || 3000
+
 app.use(express.json())  // leidzia pasint json automatiskai
 
 app.post("/users", (req, res) => {   // url path tada callback
@@ -98,6 +100,6 @@ app.delete("/book/:id", async (req, res) => {
     }
 })
 
-app.listen(3000, () => {   // klausom porto  ir siunciam zinute
-    console.log("Server is up on port " + 3000)
+app.listen(port, () => {   // klausom porto  ir siunciam zinute
+    console.log("Server is up on port " + port)
 })
